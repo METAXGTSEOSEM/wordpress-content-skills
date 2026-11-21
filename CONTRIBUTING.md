@@ -62,6 +62,11 @@ product data as verified. Label synthetic samples and preserve missing evidence.
 When a change alters the user-facing deliverable, update the relevant example and
 check that its links still resolve.
 
+A complete example package includes the brief, sources, claims, draft, review,
+final article, cluster map, keyword plan, image plan and SEO/GEO delivery sheet.
+The validator checks that these files exist and that CSV headers match the
+templates.
+
 ## Release notes
 
 Record added capabilities, behavior changes, compatibility, dependencies, and what was tested. Do not claim that editing policy references proves ranking or citation improvements.

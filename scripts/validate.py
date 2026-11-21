@@ -17,6 +17,73 @@ def scalar(text, key):
     return match.group(1) if match else None
 
 
+def csv_header(path):
+    try:
+        with path.open(newline="", encoding="utf-8") as handle:
+            return next(csv.reader(handle), None)
+    except OSError:
+        return None
+
+
+def validate_examples(root):
+    errors = []
+    required = {
+        "project-management-tool-article": [
+            "README.md", "brief.md", "sources.csv", "claims.csv", "draft-v1.md",
+            "review.md", "final.md", "wordpress-fields.md", "cluster-map.csv",
+            "keyword-plan.csv", "image-plan.csv", "seo-geo-delivery.md",
+        ],
+        "audience-rewrite": ["README.md", "before.md", "after.md", "review.md"],
+    }
+    for folder_name, files in required.items():
+        folder = root / "examples" / folder_name
+        for filename in files:
+            if not (folder / filename).is_file():
+                errors.append(f"examples/{folder_name}: missing {filename}")
+    template_folder = root / "skills/independent-site-article/assets"
+    example_folder = root / "examples/project-management-tool-article"
+    for filename in ["sources.csv", "claims.csv", "cluster-map.csv", "keyword-plan.csv", "image-plan.csv"]:
+        expected = csv_header(template_folder / filename)
+        actual = csv_header(example_folder / filename)
+        if expected and actual != expected:
+            errors.append(f"examples/project-management-tool-article/{filename}: headers do not match the template.")
+    return errors
+
+
+def validate_role_docs(root):
+    errors = []
+    roles_path = root / "skills/independent-site-article/references/roles.md"
+    readme_path = root / "README.md"
+    architecture_path = root / "docs/architecture.md"
+    if not roles_path.is_file() or not readme_path.is_file():
+        return ["Cannot validate role documentation: missing roles.md or README.md."]
+    roles = re.findall(r"^## (.+)$", roles_path.read_text(encoding="utf-8"), re.M)
+    readme = readme_path.read_text(encoding="utf-8")
+    table = re.search(
+        r"\| Role \| Responsibility \|\n\|[^\n]*\|\n((?:\|[^\n]*\|\n?)+)",
+        readme,
+    )
+    if not table:
+        return ["README role table was not found."]
+    table_text = table.group(1).lower()
+    for role in roles:
+        candidates = [role]
+        if role.startswith("Independent "):
+            candidates.append(role.removeprefix("Independent "))
+        if not any(candidate.lower() in table_text for candidate in candidates):
+            errors.append(f"README role table is missing: {role}")
+    count_words = {7: "seven", 8: "eight", 9: "nine", 10: "ten"}
+    expected_count = count_words.get(len(roles))
+    if expected_count and architecture_path.is_file():
+        architecture = architecture_path.read_text(encoding="utf-8")
+        if f"describes {expected_count} responsibilities" not in architecture:
+            errors.append(
+                f"docs/architecture.md must describe {expected_count} responsibilities "
+                f"to match roles.md."
+            )
+    return errors
+
+
 def validate(root):
     errors = []
     catalog_file = root / "catalog.json"
@@ -101,6 +168,8 @@ def validate(root):
             errors.append("README release does not match catalog.json.")
         if "**Available modules:** `" + str(len(available_entries)) + "`" not in readme_text:
             errors.append("README available-module count does not match the catalog.")
+    errors.extend(validate_examples(root))
+    errors.extend(validate_role_docs(root))
     for path in root.rglob("*"):
         relative = path.relative_to(root)
         if any(part in {".git", "__pycache__", "articles", "verification-private", ".maintenance"} or part.startswith("._") for part in relative.parts):

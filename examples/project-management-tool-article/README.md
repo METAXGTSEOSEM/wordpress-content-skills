@@ -15,6 +15,10 @@ It shows the handoff from a short brief to a reviewed, publish-ready package:
 | `review.md` | Version-specific `REWORK` decision and required changes. |
 | `final.md` | Revised article after the findings were addressed. |
 | `wordpress-fields.md` | Publishing fields and handoff notes. |
+| `cluster-map.csv` | Page role, parent pillar, siblings and internal-link direction. |
+| `keyword-plan.csv` | Focus, secondary and supporting terms with provenance. |
+| `image-plan.csv` | Image roles, placement, captions, alt text and rights. |
+| `seo-geo-delivery.md` | Search fields, GEO elements, length and image rationale. |
 
 ## What the example demonstrates
 
@@ -23,6 +27,8 @@ It shows the handoff from a short brief to a reviewed, publish-ready package:
 - Unsupported popularity, pricing and comparison claims are removed.
 - Missing trial evidence stays visibly missing instead of being invented.
 - SEO and AI-search guidance does not override factual accuracy.
+- The cluster map shows the page's role and internal links before drafting.
+- The SEO/GEO sheet recommends a length and image count with a reason, not a fixed quota.
 - The final package includes fields a WordPress editor can use directly.
 
 ## Run the same workflow

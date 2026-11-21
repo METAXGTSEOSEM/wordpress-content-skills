@@ -1,6 +1,6 @@
-claim_id,claim,status,evidence,notes
-C1,The right tool depends on the agency workflow and client access model,Editorial guidance,S4,Do not imply one universal winner
-C2,Permissions and guest access should be tested with a real client scenario,Editorial guidance,S1 S3,No vendor-specific assertion
-C3,Pricing should be checked against current plan limits and billing terms,Editorial guidance,S2,Do not quote a price unless supplied
-C4,Migration effort includes data cleanup and team adoption,Editorial guidance,S3,Do not promise a migration time
-C5,Trial notes should record the same tasks for each vendor,Editorial guidance,S3,Method guidance only
+claim_id,draft_version,section,claim_text,source_ids,verification_status,qualifiers_units_scope,risk,reviewer,checked_at,action
+C1,v1,Opening,The right tool depends on the agency workflow and client access model,S4,Editorial guidance,General guidance; no vendor-specific claim,Low,Content editor,2026-11-20,Keep
+C2,v1,Client access,Permissions and guest access should be tested with a real client scenario,S1;S3,Editorial guidance,No vendor-specific assertion,Medium,Content editor,2026-11-20,Keep
+C3,v1,Cost,Pricing should be checked against current plan limits and billing terms,S2,Editorial guidance,No price quoted,High,Fact checker,2026-11-20,Keep
+C4,v1,Migration,Migration effort includes data cleanup and team adoption,S3,Editorial guidance,No time promise,Medium,Content editor,2026-11-20,Keep
+C5,v1,Trial,Trial notes should record the same tasks for each vendor,S3,Editorial guidance,Method guidance only,Low,Content editor,2026-11-20,Keep

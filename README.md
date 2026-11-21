@@ -181,9 +181,19 @@ shows the complete handoff:
 | Review decision | [review.md](examples/project-management-tool-article/review.md) |
 | Final article | [final.md](examples/project-management-tool-article/final.md) |
 | WordPress fields | [wordpress-fields.md](examples/project-management-tool-article/wordpress-fields.md) |
+| Cluster map | [cluster-map.csv](examples/project-management-tool-article/cluster-map.csv) |
+| Keyword plan | [keyword-plan.csv](examples/project-management-tool-article/keyword-plan.csv) |
+| Image plan | [image-plan.csv](examples/project-management-tool-article/image-plan.csv) |
+| SEO/GEO sheet | [seo-geo-delivery.md](examples/project-management-tool-article/seo-geo-delivery.md) |
 
 The example is synthetic and clearly labeled. Do not publish its fictional brand,
 placeholders or product details as real claims.
+
+## See a training-manual opening rewritten
+
+The [audience rewrite example](examples/audience-rewrite/README.md) shows the same
+generic topic as a textbook-style introduction and as a decision-led opening for
+an operations lead. It includes the review findings that explain what changed.
 
 ## Workflow catalog
 
@@ -314,6 +324,7 @@ skills/
     assets/                      Brief, cluster, keyword, image and delivery templates
 examples/
   project-management-tool-article/  Complete synthetic article package
+  audience-rewrite/                  Training-manual vs decision-led opening
 docs/
   architecture.md                Packaging and compatibility rules
   compatibility.md               Host requirements and limits

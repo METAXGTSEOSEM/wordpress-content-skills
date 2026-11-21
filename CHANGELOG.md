@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- Complete the worked example with cluster map, keyword plan, image plan and SEO/GEO delivery sheet.
+- Add a synthetic training-manual versus decision-led opening example.
+- Validate example completeness, CSV template headers and README role-table consistency.
+
 ## 1.5.0 - 2026-11-20
 
 - Add audience and voice calibration so procurement, owner, engineer and operator readers receive different openings, evidence and CTAs.

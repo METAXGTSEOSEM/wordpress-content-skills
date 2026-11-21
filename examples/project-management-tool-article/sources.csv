@@ -1,5 +1,5 @@
-source_id,title,publisher,url,accessed,use,status
-S1,Vendor documentation,Client to supply,,,Features permissions integrations and limits,MISSING
-S2,Current pricing pages,Client to supply,,,Plan limits billing terms and add-ons,MISSING
-S3,Trial notes,Content team,,,Observed workflow during a bounded trial,SYNTHETIC
-S4,Internal requirements,Client to supply,,,Team size client access reporting and migration needs,MISSING
+source_id,title,url_or_private_file,publisher,source_type,document_date,accessed_at,locale_scope,supports_claim_ids,evidence_location,read_status,limitations,public_permission
+S1,Vendor documentation,Client to supply,Client,vendor documentation,,not supplied,US/en,C1;C2;C4,vendor documentation,MISSING,No document supplied,not cleared
+S2,Current pricing pages,Client to supply,Client,pricing page,,not supplied,US/en,C3,pricing,MISSING,No current pricing supplied,not cleared
+S3,Trial notes,private synthetic trial notes,Content team,synthetic,2026-11-20,2026-11-20,US/en,C2;C4;C5,trial notes,SYNTHETIC,Illustrative only,synthetic
+S4,Internal requirements,Client to supply,Client,internal brief,,not supplied,US/en,C1;C3,requirements,MISSING,No client brief supplied,not cleared

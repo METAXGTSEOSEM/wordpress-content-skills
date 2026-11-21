@@ -1,0 +1,5 @@
+image_id,role,subject,placement,caption,alt_text,source,rights,status
+IMG-01,hero/context,Agency team reviewing a project board,After the introduction,A small agency team reviews a shared project board during a trial,Team reviewing a project board on a laptop,Client to supply,Not cleared,To create
+IMG-02,structure/diagram,Requirements-to-trial workflow,After section 1,From requirements to a controlled vendor trial,Diagram showing requirements; trial tasks; evidence and decision,Original diagram,Repository-created,To create
+IMG-03,detail,Client guest permissions example,In section 2,What a client guest should and should not see,Diagram of client guest permissions and internal-only work,Original diagram,Repository-created,To create
+IMG-04,chart,Trial scorecard,In section 4,A scorecard keeps vendor evidence comparable,Table-style scorecard with criteria and evidence fields,Original chart,Repository-created,To create
