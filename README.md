@@ -18,12 +18,17 @@
 </p>
 
 <p align="center">
+  <strong>Latest:</strong> v1.5.0 — audience, cluster and keyword planning
+</p>
+
+<p align="center">
   <a href="#quickstart">Quickstart</a> ·
   <a href="examples/project-management-tool-article/README.md">See a full example</a> ·
   <a href="#workflow-catalog">Workflows</a> ·
   <a href="#installation">Install</a> ·
   <a href="docs/compatibility.md">Compatibility</a> ·
   <a href="docs/faq.md">FAQ</a> ·
+  <a href="docs/quality-gates.md">Quality gates</a> ·
   <a href="CHANGELOG.md">Changelog</a> ·
   <a href="CONTRIBUTING.md">Contribute</a>
 </p>
@@ -53,8 +58,9 @@ included in the current release.
 The article Skill keeps its existing ID, `independent-site-article`, and is now
 version `1.3.0`.
 
-The workflow produces a manuscript and WordPress publishing fields. It runs in
-a compatible agent host; it is not a WordPress plugin. CMS access and publishing
+The workflow produces a manuscript, cluster and keyword plans, an SEO/GEO
+delivery sheet, an image plan and WordPress publishing fields. It runs in a
+compatible agent host; it is not a WordPress plugin. CMS access and publishing
 authorization are separate.
 
 ## What you get
@@ -195,6 +201,18 @@ The [audience rewrite example](examples/audience-rewrite/README.md) shows the sa
 generic topic as a textbook-style introduction and as a decision-led opening for
 an operations lead. It includes the review findings that explain what changed.
 
+## What the output looks like
+
+<p align="center">
+  <img src="docs/assets/delivery-preview.png" alt="Rendered preview of a cluster map, keyword plan and SEO/GEO delivery sheet" width="1100">
+</p>
+
+The preview uses the synthetic project-management example. Open the
+[SEO/GEO sheet](examples/project-management-tool-article/seo-geo-delivery.md),
+[keyword plan](examples/project-management-tool-article/keyword-plan.csv) or
+[image plan](examples/project-management-tool-article/image-plan.csv) for the
+underlying files.
+
 ## Workflow catalog
 
 | Workflow | Status | Installable Skill | Scope |
@@ -330,9 +348,12 @@ docs/
   compatibility.md               Host requirements and limits
   data-handling.md               Reads, writes and permissions
   faq.md                         Common questions
+  quality-gates.md               PASS / REWORK / BLOCKED acceptance criteria
   publishing-checklist.md        WordPress pre/post-publish checks
   roadmap.md                     Planned workflow specifications
   wordpress-fields.md            Field mapping and handoff guidance
+SECURITY.md                      Private vulnerability reporting
+CODE_OF_CONDUCT.md               Community behavior and reporting
 scripts/
   validate.py                    Catalog, packaging, language, and link checks
 ```
@@ -353,6 +374,7 @@ python3 scripts/validate.py
   [Feature request](.github/ISSUE_TEMPLATE/feature_request.yml) template.
 - Ask usage questions in [Discussions Q&A](https://github.com/METAXGTSEOSEM/wordpress-content-skills/discussions/categories/q-a).
 - Share a redacted output in [Show and tell](https://github.com/METAXGTSEOSEM/wordpress-content-skills/discussions/categories/show-and-tell).
+- Read [quality gates](docs/quality-gates.md), [security policy](SECURITY.md) and [code of conduct](CODE_OF_CONDUCT.md).
 
 Remove credentials, customer names, private messages and unpublished product
 data before posting. An Issue or Discussion is not authorization to publish a

@@ -5,6 +5,10 @@
 - Complete the worked example with cluster map, keyword plan, image plan and SEO/GEO delivery sheet.
 - Add a synthetic training-manual versus decision-led opening example.
 - Validate example completeness, CSV template headers and README role-table consistency.
+- Add a public quality-gate guide for `PASS`, `REWORK`, `BLOCKED` and separate technical statuses.
+- Add a security policy and project code of conduct with private reporting paths.
+- Add a rendered delivery preview and update the README overview and latest-release line.
+- Add a structured Show and tell discussion template for redacted article packages.
 
 ## 1.5.0 - 2026-11-20
 
