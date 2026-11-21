@@ -24,6 +24,7 @@
   <a href="#installation">Install</a> ·
   <a href="docs/compatibility.md">Compatibility</a> ·
   <a href="docs/faq.md">FAQ</a> ·
+  <a href="CHANGELOG.md">Changelog</a> ·
   <a href="CONTRIBUTING.md">Contribute</a>
 </p>
 
@@ -216,7 +217,7 @@ https://github.com/METAXGTSEOSEM/wordpress-content-skills
 
 For discovery and installation, use only entries marked `available` in
 [catalog.json](catalog.json). Planned modules have no installation path.
-Installing the article module does not register seven global subagents.
+Installing the article module does not register a fixed set of global subagents.
 
 ### Language editing dependencies
 
@@ -237,7 +238,8 @@ Third-party Skill text is not bundled.
 
 ```mermaid
 flowchart LR
-    A[Brief and research] --> B[Draft]
+    P[Audience + cluster + keywords] --> A[Brief and research]
+    A --> B[Draft]
     B --> C[Fact check]
     B --> D[SEO and AI-search review]
     C --> E[Revision]
@@ -251,6 +253,7 @@ flowchart LR
 
 | Role | Responsibility |
 | :--- | :--- |
+| Cluster and keyword planner | Cluster map, cannibalization check, focus and secondary keywords, and internal-link plan. |
 | Researcher | Search intent, first-party material, source records, and outline. |
 | Writer | Evidence-based drafting and revisions. |
 | Fact checker | Claims, figures, specifications, scope, and citations. |

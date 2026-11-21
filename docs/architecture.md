@@ -39,7 +39,7 @@ Some repetition is acceptable when it keeps a copied Skill usable. Validate link
 
 ## Roles are execution instructions
 
-The article module describes seven responsibilities in `references/roles.md`. They are not seven installed Skills or seven automatically registered subagents.
+The article module describes eight responsibilities in `references/roles.md`. They are not eight installed Skills or eight automatically registered subagents.
 
 A coordinator may delegate roles using the host's actual capabilities. If independent review is unavailable, report the limitation. Do not turn a host-dependent feature into a promise.
 
