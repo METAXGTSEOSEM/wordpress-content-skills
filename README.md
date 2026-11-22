@@ -69,6 +69,7 @@ authorization are separate.
 - A visible review decision: `PASS`, `REWORK` or `BLOCKED`.
 - Source and claim records, including missing evidence.
 - A cluster map, keyword plan and cannibalization check.
+- A recent-article differentiation check and a rolling style-ledger template.
 - H1, SEO title, meta description, slug, excerpt, image notes and internal-link
   suggestions.
 - A length range set before drafting, with English word count or Chinese character count, actual length and variance, not a fixed quota.
@@ -110,11 +111,16 @@ records the assumption.
 - If you already have a keyword list, it is used with its source and date. If
   not, the Skill can use DataForSEO when authorized; AI-generated keywords are
   labeled unverified and never presented as measured volume.
+- A recent-article style ledger records the last five to ten posts so a new
+  article does not repeat the same opening, early H2 sequence, proof type and
+  CTA. Each article also needs one signature detail that cannot be reused by a
+  product-name swap.
 - Article length and image count are recommended per article with a rationale.
   There is no universal word count or "one image every N words" rule.
 
 See [cluster and keywords](skills/independent-site-article/references/cluster-and-keywords.md)
-and [SEO/GEO delivery](skills/independent-site-article/references/seo-geo-delivery.md).
+and [SEO/GEO delivery](skills/independent-site-article/references/seo-geo-delivery.md),
+or read the [recent-article style ledger](docs/article-style-ledger.md).
 
 ## Who it is for
 
@@ -340,7 +346,7 @@ skills/
     SKILL.md
     agents/openai.yaml
     references/                  Workflow, content types, audience, cluster/keywords, SEO/GEO and policy sources
-    assets/                      Brief, cluster, keyword, image and delivery templates
+    assets/                      Brief, cluster, keyword, image, delivery and style-ledger templates
 examples/
   project-management-tool-article/  Complete synthetic article package
   audience-rewrite/                  Training-manual vs decision-led opening
@@ -350,6 +356,7 @@ docs/
   data-handling.md               Reads, writes and permissions
   faq.md                         Common questions
   quality-gates.md               PASS / REWORK / BLOCKED acceptance criteria
+  article-style-ledger.md        Rolling recent-article differentiation guide
   publishing-checklist.md        WordPress pre/post-publish checks
   roadmap.md                     Planned workflow specifications
   wordpress-fields.md            Field mapping and handoff guidance

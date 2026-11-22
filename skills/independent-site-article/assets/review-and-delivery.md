@@ -26,6 +26,9 @@ A total score cannot offset them.
 - Technical/compliance material placed after the decision context:
 - Anti-template fingerprint compared with:
 - Differences in opening, H2 order, evidence and CTA:
+- Recent style ledger reviewed (last 5–10, especially last 2–3):
+- Signature detail unique to this article:
+- Similarity intentionally kept and why:
 - Near-duplicate or template fingerprint still present:
 
 ## Cluster and keyword check

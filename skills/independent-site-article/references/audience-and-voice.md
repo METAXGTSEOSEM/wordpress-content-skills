@@ -64,20 +64,25 @@ first-person experience, factory visits, customer stories or expert credentials.
 ## Anti-template fingerprint
 
 Before final review, compare this article with two or three existing pages in the
-same cluster. Record:
+same cluster and with the recent published articles in
+`assets/article-style-ledger.csv` when one is supplied. Record:
 
 | Dimension | This article | Existing page(s) | Difference or reason to keep the same pattern |
 | --- | --- | --- | --- |
+| Title and meta pattern |  |  |  |
 | Opening move | Decision / risk / question / scenario / data / misconception |  |  |
 | First three H2 sections |  |  |  |
 | Example or evidence type |  |  |  |
+| Table, steps, FAQ or visual pattern |  |  |  |
 | CTA |  |  |  |
+| Signature detail | A concrete scenario, constraint, rule, calculation or evidence set unique to this article |  |  |
 | Repeated phrases or sentence rhythm |  |  |  |
 
-If the opening, section order, example type and CTA are all the same as another
-page, revise before calling the article finished. Reusing a heading pattern is
-acceptable when the reader's task genuinely requires it; a complete template
-fingerprint is not.
+The product-swap test is mandatory: if changing the product name and keyword
+would leave the article intact, it is a template candidate. If the opening,
+early section order, evidence type and CTA all repeat another page, revise before
+final review. Reusing a heading pattern is acceptable when the reader's task
+genuinely requires it; a complete template fingerprint is not.
 
 ## Review gate
 
@@ -86,4 +91,5 @@ fingerprint is not.
 - Technical and compliance material appears where it affects a decision.
 - The CTA fits the reader's authority and business model.
 - The article is not a near-duplicate of a sibling page.
+- Recent-article differences and one signature detail are recorded.
 - No first-hand experience or credential is invented for voice.

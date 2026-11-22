@@ -29,6 +29,7 @@ Before the outline:
 4. Assign one primary intent and one focus keyword to the URL.
 5. Check existing titles, H1s, URLs, meta descriptions and intents for cannibalization.
 6. Record the action: merge, differentiate, canonical, link, noindex, retire, or keep with evidence.
+7. If a recent-article style ledger is supplied, read the last five to ten rows and record the planned differences and one signature detail.
 
 Use `cluster-map.csv` and `keyword-plan.csv`. A competitor URL is a research reference, not a template to copy.
 
@@ -41,7 +42,7 @@ Use `cluster-map.csv` and `keyword-plan.csv`. A competitor URL is a research ref
 5. Read representative results and primary sources. Government, standards, forum, and video results may explain intent; do not exclude them mechanically.
 6. Identify reader questions and the additional help this article can credibly provide.
 7. Match the opening to the reader's decision and avoid a training-manual structure.
-8. Record the anti-template difference from two or three sibling pages.
+8. Record the anti-template difference from two or three sibling pages and from recent published articles in the style ledger.
 
 Record what each source supports, when it was read, and its scope. Internal material needs a provider, version, and permission to disclose.
 
@@ -97,6 +98,7 @@ Verify:
 - The keyword plan and SEO/GEO fields use one focus keyword and unique title/H1/URL/meta.
 - The image plan has purpose, caption, alt text and rights status.
 - The length range was set before drafting; actual length and any variance are recorded.
+- The recent-article ledger comparison and signature detail show that the page is not a product-name swap.
 - Editing did not change figures, conditions, certainty, negation, or attribution.
 - Titles, metadata, captions, tables, and CTA match the manuscript.
 - The specified editor was actually used and coverage limits are disclosed.
@@ -114,7 +116,11 @@ Record the accepted file, version, reviewer, time, and available hash. Substanti
 
 Deliver the manuscript, cluster map, keyword plan, SEO/GEO delivery sheet, image plan, source and claim records, and review results separately.
 
-Include a length rationale, actual length, variance note, and an image-count/placement rationale for the specific article.
+Include a length rationale, actual length, variance note, recent-article differentiation note, and an image-count/placement rationale for the specific article.
+
+After publication, append the article to the project's `article-style-ledger.csv`
+and update `similar_to` and `review_note`. Keep the ledger outside the installed
+Skill.
 
 Editorial status: `PASS`, `REWORK`, or `BLOCKED`.
 

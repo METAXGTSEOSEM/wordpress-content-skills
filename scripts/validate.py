@@ -47,6 +47,16 @@ def validate_examples(root):
                 errors.append(f"examples/{folder_name}: missing {filename}")
     template_folder = root / "skills/independent-site-article/assets"
     example_folder = root / "examples/project-management-tool-article"
+    ledger_header = [
+        "date", "article_id", "url", "content_type", "reader", "title_pattern",
+        "opening_move", "first_three_h2", "proof_type", "cta", "signature_detail",
+        "similar_to", "review_note",
+    ]
+    if csv_header(template_folder / "article-style-ledger.csv") != ledger_header:
+        errors.append("skills/independent-site-article/assets/article-style-ledger.csv: invalid headers.")
+    brief_template = template_folder / "brief.md"
+    if brief_template.is_file() and "## Recent-article differentiation" not in brief_template.read_text(encoding="utf-8"):
+        errors.append("skills/independent-site-article/assets/brief.md: missing recent-article differentiation section.")
     for filename in ["sources.csv", "claims.csv", "cluster-map.csv", "keyword-plan.csv", "image-plan.csv"]:
         expected = csv_header(template_folder / filename)
         actual = csv_header(example_folder / filename)

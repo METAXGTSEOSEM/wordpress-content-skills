@@ -39,6 +39,13 @@ Help the reader build a shortlist and a repeatable evaluation process.
 - Primary keyword: project management tool for small agency
 - Secondary terms: agency project management software, tool evaluation
 
+## Recent-article differentiation
+
+- Recent style ledger reviewed: none supplied; this is a standalone synthetic example
+- Planned differences: decision-led opening, client-access proof, trial table and requirements-list CTA
+- Signature detail: a client guest must see selected files without internal comments, budgets or other projects
+- Similarity intentionally kept: not applicable
+
 ## Available evidence
 
 None supplied. Vendor documentation, trial notes, current pricing and internal

@@ -34,6 +34,13 @@
 - Internal-link targets in and out:
 - Known cannibalization or duplicate pages:
 
+## Recent-article differentiation
+
+- Recent style ledger reviewed (article IDs or URLs):
+- Planned differences from recent articles: opening / first H2 sections / proof / CTA / format
+- Signature detail unique to this article:
+- Similarity intentionally kept and why:
+
 ## Keywords and search intent
 
 - Existing keyword list supplied: yes / no

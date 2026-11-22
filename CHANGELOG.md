@@ -13,6 +13,7 @@
 - Validate example length, GEO elements, image markers and final-review decisions.
 - Clarify README quality boundaries and remove the unsupported publish-ready claim.
 - Record length units and set provisional ranges before drafting; record actual length and variance at delivery.
+- Add a rolling recent-article style ledger, brief fields, review checks and a signature-detail requirement for series-level anti-template control.
 
 ## 1.5.0 - 2026-11-20
 

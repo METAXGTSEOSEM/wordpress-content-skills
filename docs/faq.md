@@ -64,6 +64,15 @@ independent review. That can remove generic phrasing and repetition, but it does
 not guarantee a particular AI-detector score, authorship result or editorial
 quality without human review.
 
+## Will every article look the same?
+
+Not if you provide recent articles or the style ledger. The Skill compares the
+new brief and final copy with the last five to ten published rows, especially
+the last two or three. It records the opening, early H2 order, proof type, CTA
+and one signature detail, then rejects a product-name swap even when the prose
+reads naturally. It does not automatically remember earlier articles without
+that input.
+
 ## Can it write differently for procurement, owners and engineers?
 
 Yes. The audience and voice reference calibrates the opening, evidence depth and
