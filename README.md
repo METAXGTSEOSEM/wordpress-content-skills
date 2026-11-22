@@ -133,7 +133,11 @@ when the question is which pages a site needs, how they relate, or what to write
 next. It inventories URLs, assigns pillar and cluster roles, checks
 cannibalization, finds gaps, prioritizes pages and produces an internal-link
 plan. It hands one selected page to `independent-site-article` instead of writing
-the manuscript itself.
+the manuscript itself. It records URL normalization, excluded patterns,
+canonical/redirect/noindex state, orphan pages and controlled status values.
+
+See the [synthetic cluster example](examples/cluster-architecture-small-site/README.md)
+for a complete inventory, cluster map, link plan and report.
 
 ## Who it is for
 
@@ -371,6 +375,7 @@ skills/
 examples/
   project-management-tool-article/  Complete synthetic article package
   audience-rewrite/                  Training-manual vs decision-led opening
+  cluster-architecture-small-site/   Synthetic site inventory, cluster and link example
 docs/
   architecture.md                Packaging and compatibility rules
   compatibility.md               Host requirements and limits

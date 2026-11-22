@@ -10,6 +10,54 @@ than inferring it from the URL.
 Do not mix sites, brands, markets or languages in one architecture decision
 without a recorded reason.
 
+## URL normalization and scope
+
+Inventory only after defining the canonical origin and normalization policy:
+
+- use the canonical URL from the page or sitemap when it is available;
+- normalize the host and scheme according to the site policy;
+- remove fragments and tracking parameters used only for attribution;
+- retain query parameters that change the rendered page;
+- do not lowercase a case-sensitive path without evidence;
+- keep one logical page per market and language;
+- group translations through hreflang or a recorded market/language mapping;
+- treat a product variant as a separate page only when it has a distinct,
+  indexable intent and canonical URL.
+
+Record excluded patterns and their counts: pagination, search results, tag and
+author archives, attachment pages, feeds, APIs, account and checkout paths, and
+other non-content URLs. Exclusion is not the same as deletion; record why the
+pattern is outside the content architecture.
+
+Keep redirected, noindex, retired and draft URLs in the inventory with their
+status, but do not assign them to a normal cluster unless the record explains
+the role. Follow the canonical target for normal cluster planning.
+
+Global navigation links do not prove cluster connectivity. A page is an orphan
+when no relevant in-content internal link reaches it. Record the inbound count
+and the proposed link or retirement action.
+
+## Controlled values
+
+Use these values consistently in the CSV files:
+
+| Field | Allowed values |
+| --- | --- |
+| Inventory `status` | `existing`, `draft`, `proposed`, `redirected`, `noindex`, `retired`, `unknown` |
+| `page_role` | `pillar`, `cluster`, `product-category`, `product`, `comparison`, `case-study`, `faq-glossary`, `utility`, `unknown` |
+| `business_value` | `high`, `medium`, `low`, `unknown` |
+| `conversion_role` | `inquiry`, `purchase`, `lead-support`, `retention`, `none`, `unknown` |
+| `evidence_status` | `available`, `partial`, `missing`, `unknown` |
+| `orphan_status` | `not-orphan`, `orphan`, `unknown` |
+| `priority` | `high`, `medium`, `low`, `unknown` |
+| `cannibalization_status` | `none`, `potential`, `confirmed`, `resolved`, `unknown` |
+| `link_type` | `pillar-to-cluster`, `cluster-to-pillar`, `sibling`, `guide-to-product`, `case-to-product`, `product-to-guide`, `other` |
+| `link_status` | `proposed`, `live`, `missing`, `redirected`, `broken`, `unknown` |
+| `target_status` | `existing`, `draft`, `proposed`, `redirected`, `noindex`, `retired`, `missing`, `unknown` |
+
+Do not create local synonyms that break joins across inventory, cluster and link
+files.
+
 ## Page roles
 
 | Role | Job | Typical link direction |
@@ -84,12 +132,15 @@ Unpublished, redirected or missing targets stay pending or blocked.
 The architecture plan is complete only when:
 
 - the scope and source limitations are visible;
+- canonical origin, URL normalization and exclusions are recorded;
 - inventory rows have a role or unknown status;
+- controlled values are used consistently;
 - every page in scope has one primary intent or a recorded gap;
 - duplicate and competing pages have decisions;
 - the cluster map has a pillar or an explicit missing-pillar action;
 - priorities and dependencies have reasons;
 - the link plan is usable and verified where access exists;
+- orphan pages have an inbound-link finding and an action;
 - the report separates observed facts, proposals and assumptions.
 
 This is a content-architecture plan, not a technical crawl, indexation audit,

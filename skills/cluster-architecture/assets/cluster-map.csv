@@ -1,1 +1,1 @@
-cluster_id,pillar_url,url,page_role,primary_intent,focus_keyword,parent_pillar,sibling_urls,priority,evidence_status,cannibalization_status,notes
+cluster_id,pillar_url,url,page_role,primary_intent,focus_keyword,parent_pillar,sibling_urls,priority,priority_reason,evidence_status,cannibalization_status,notes

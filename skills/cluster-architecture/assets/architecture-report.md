@@ -16,7 +16,14 @@
 - Proposed pages:
 - Retired, redirected or noindex pages:
 - Unknown metadata:
+- Canonical origin and URL normalization:
+- Excluded URL patterns:
 - Main limitations:
+
+## Orphan pages
+
+| URL | Page role | Inbound links | Why it matters | Proposed link or retirement |
+| --- | --- | --- | --- | --- |
 
 ## Cluster overview
 

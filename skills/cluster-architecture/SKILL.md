@@ -28,11 +28,14 @@ existing page metadata, keyword data, commercial priorities and available access
 Ask for:
 
 - the canonical site origin and sitemap or URL list;
+- the URL normalization and www/http/trailing-slash policy;
 - page titles, H1s and meta descriptions when crawling is unavailable;
 - target countries, languages and B2B or B2C purpose;
 - priority products, services and reader decisions;
 - keyword data or authorization to query a data source;
 - existing redirects, noindex pages, retired pages and known duplicates;
+- excluded URL patterns such as pagination, search, tags, authors, feeds, APIs,
+  account paths and non-indexable variants;
 - crawl, analytics and CMS access limits.
 
 Do not invent URLs, traffic, keyword volume, rankings, authority, links or
@@ -46,8 +49,9 @@ data or unpublished material in the installed Skill.
 
 Create one row per known or proposed URL in
 [site-inventory.csv](assets/site-inventory.csv). Record the source, checked date,
-market, language, page status and evidence limits. Use unknown for missing
-metadata.
+canonical URL, market, language, page status, business value, conversion role and
+evidence limits. Use unknown for missing metadata. Record the URL normalization
+and exclusion scope before counting pages.
 
 Read [the architecture method](references/method.md) for page roles, intent,
 cannibalization and priority rules.
@@ -68,6 +72,9 @@ A pillar explains the category and routes readers to its cluster pages. A
 cluster page answers one reader intent and links up to its pillar and sideways
 only where useful. Do not create a new URL merely because a keyword has a small
 variation.
+
+Cluster only canonical, indexable content URLs. Keep redirected, noindex, draft
+and retired URLs in the inventory with an explicit status and an action.
 
 Use [cluster-map.csv](assets/cluster-map.csv) for cluster membership, parent
 pillar, priority and cannibalization status.
@@ -91,6 +98,10 @@ Do not solve cannibalization by adding more keywords to both pages.
 
 Use keyword volume, difficulty and ranking data only when measured and sourced.
 AI-generated keywords are unverified hypotheses, not measured demand.
+
+Use the controlled values in
+[the architecture method](references/method.md) for status, page role, evidence,
+priority, cannibalization and link fields.
 
 ## 5. Find gaps and prioritize
 
@@ -130,6 +141,9 @@ Use [link-plan.csv](assets/link-plan.csv) to record:
 Use descriptive anchors and verify that the destination exists and is not a
 draft. Do not create links just to increase link counts.
 
+Count relevant in-content inbound links. Mark pages with no path back to a
+relevant pillar or sibling as orphans and propose a link, merge or retirement.
+
 ## 7. Review and deliver
 
 Use [architecture-report.md](assets/architecture-report.md) to summarize the
@@ -139,12 +153,15 @@ links, assumptions and limitations.
 Review gate:
 
 - The source of the inventory and the checked date are visible.
+- The canonical origin, URL normalization and excluded patterns are recorded.
 - Every proposed or existing page has a role or is marked unknown.
 - Each URL has one primary intent and one focus keyword, or the gap is explicit.
+- Controlled values are used consistently.
 - Cannibalization decisions are recorded.
 - Missing evidence and access limits are visible.
 - Priorities have reasons and dependencies.
 - Internal-link targets are verified or marked pending.
+- Orphan pages and their proposed actions are visible.
 - The report does not claim ranking, traffic, AI citation or publishing results.
 
 Decision:

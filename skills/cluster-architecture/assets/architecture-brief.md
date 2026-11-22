@@ -4,6 +4,8 @@
 
 - Site or sites:
 - Canonical origin:
+- URL normalization rules:
+- Excluded URL patterns:
 - Markets and languages:
 - Business model: B2B / B2C / mixed
 - Priority products or services:
@@ -15,6 +17,7 @@
 - Sitemap or URL list:
 - Page export or crawl access:
 - Titles, H1s and meta descriptions supplied:
+- Canonical, redirect and noindex data:
 - Keyword list or authorized data source:
 - Existing redirects or retired pages:
 - Analytics, CMS or search-console access:

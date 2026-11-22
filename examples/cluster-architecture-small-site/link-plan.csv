@@ -1,0 +1,11 @@
+source_url,target_url,anchor_text,link_type,link_status,target_status,notes
+https://example.com/commercial-coffee-equipment/,https://example.com/blog/choose-espresso-machine-small-cafe,how to choose an espresso machine,pillar-to-cluster,live,existing,Existing hub link
+https://example.com/commercial-coffee-equipment/,https://example.com/blog/burr-grinder-types,commercial grinder types,pillar-to-cluster,proposed,existing,Fix the orphan
+https://example.com/commercial-coffee-equipment/,https://example.com/blog/commercial-coffee-machine-maintenance,maintenance planning,pillar-to-cluster,live,existing,Existing hub link
+https://example.com/blog/choose-espresso-machine-small-cafe,https://example.com/commercial-coffee-equipment/,commercial coffee equipment,cluster-to-pillar,live,existing,Existing breadcrumb or in-content link
+https://example.com/blog/burr-grinder-types,https://example.com/commercial-coffee-equipment/,commercial coffee equipment,cluster-to-pillar,proposed,existing,Add after the orphan fix
+https://example.com/blog/burr-grinder-types,https://example.com/blog/choose-espresso-machine-small-cafe,espresso machine selection,sibling,proposed,existing,Useful next step after grinder education
+https://example.com/blog/choose-espresso-machine-small-cafe,https://example.com/products/espresso-machines,browse espresso machines,guide-to-product,proposed,existing,Connect decision guide to commercial category
+https://example.com/products/espresso-machines,https://example.com/products/dual-boiler-espresso-machine,dual boiler espresso machine,other,live,existing,Category card or in-content link
+https://example.com/products/dual-boiler-espresso-machine,https://example.com/products/espresso-machines,espresso machine range,product-to-guide,live,existing,Back to category
+https://example.com/blog/espresso-machine-buying-guide,https://example.com/commercial-coffee-equipment/,commercial coffee equipment,cluster-to-pillar,proposed,existing,Add only if the duplicate page is kept

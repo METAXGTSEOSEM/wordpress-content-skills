@@ -15,6 +15,7 @@
 - Record length units and set provisional ranges before drafting; record actual length and variance at delivery.
 - Add a rolling recent-article style ledger, brief fields, review checks and a signature-detail requirement for series-level anti-template control.
 - Add the standalone `cluster-architecture` preview module for site inventory, topic clusters, pillars, cannibalization, content gaps, priorities and internal-link planning.
+- Add cluster URL normalization, controlled values, canonical/redirect/noindex handling, orphan checks and a validated synthetic example.
 
 ## 1.5.0 - 2026-11-20
 

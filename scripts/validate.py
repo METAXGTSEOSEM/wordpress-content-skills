@@ -39,6 +39,10 @@ def validate_examples(root):
             "seo-geo-delivery.md",
         ],
         "audience-rewrite": ["README.md", "before.md", "after.md", "review.md"],
+        "cluster-architecture-small-site": [
+            "README.md", "architecture-brief.md", "site-inventory.csv",
+            "cluster-map.csv", "link-plan.csv", "architecture-report.md",
+        ],
     }
     for folder_name, files in required.items():
         folder = root / "examples" / folder_name
@@ -62,6 +66,13 @@ def validate_examples(root):
         actual = csv_header(example_folder / filename)
         if expected and actual != expected:
             errors.append(f"examples/project-management-tool-article/{filename}: headers do not match the template.")
+    cluster_template = root / "skills/cluster-architecture/assets"
+    cluster_example = root / "examples/cluster-architecture-small-site"
+    for filename in ["site-inventory.csv", "cluster-map.csv", "link-plan.csv"]:
+        expected = csv_header(cluster_template / filename)
+        actual = csv_header(cluster_example / filename)
+        if expected and actual != expected:
+            errors.append(f"examples/cluster-architecture-small-site/{filename}: headers do not match the template.")
     final = example_folder / "final.md"
     delivery = example_folder / "seo-geo-delivery.md"
     final_review = example_folder / "final-review.md"
@@ -111,6 +122,71 @@ def validate_examples(root):
         review_text = final_review.read_text(encoding="utf-8")
         if not re.search(r"Editorial decision:\s*`?(PASS|REWORK|BLOCKED)`?", review_text):
             errors.append("examples/project-management-tool-article/final-review.md: missing editorial decision.")
+    if cluster_example.is_dir():
+        errors.extend(validate_cluster_example(cluster_example))
+    return errors
+
+
+def validate_cluster_example(folder):
+    errors = []
+    inventory_path = folder / "site-inventory.csv"
+    cluster_path = folder / "cluster-map.csv"
+    link_path = folder / "link-plan.csv"
+    report_path = folder / "architecture-report.md"
+    try:
+        with inventory_path.open(newline="", encoding="utf-8") as handle:
+            inventory = list(csv.DictReader(handle))
+        with cluster_path.open(newline="", encoding="utf-8") as handle:
+            clusters = list(csv.DictReader(handle))
+        with link_path.open(newline="", encoding="utf-8") as handle:
+            links = list(csv.DictReader(handle))
+    except OSError as error:
+        return [f"examples/cluster-architecture-small-site: cannot read CSV: {error}"]
+    inventory_urls = {row.get("url", "").strip() for row in inventory}
+    if not inventory_urls:
+        errors.append("examples/cluster-architecture-small-site/site-inventory.csv: no URLs.")
+    allowed_inventory = {
+        "status": {"existing", "draft", "proposed", "redirected", "noindex", "retired", "unknown"},
+        "page_role": {"pillar", "cluster", "product-category", "product", "comparison", "case-study", "faq-glossary", "utility", "unknown"},
+        "business_value": {"high", "medium", "low", "unknown"},
+        "conversion_role": {"inquiry", "purchase", "lead-support", "retention", "none", "unknown"},
+        "evidence_status": {"available", "partial", "missing", "unknown"},
+        "orphan_status": {"not-orphan", "orphan", "unknown"},
+    }
+    for row in inventory:
+        for field, allowed in allowed_inventory.items():
+            if row.get(field) not in allowed:
+                errors.append(f"inventory has an unknown {field}: {row.get(field)}")
+    for row in clusters:
+        if row.get("url", "").strip() not in inventory_urls:
+            errors.append(f"cluster map URL is missing from inventory: {row.get('url')}")
+        if row.get("page_role") not in {"pillar", "cluster", "product-category", "product", "comparison", "case-study", "faq-glossary", "utility", "unknown"}:
+            errors.append(f"cluster map has an unknown page_role: {row.get('page_role')}")
+        if row.get("priority") not in {"high", "medium", "low", "unknown"}:
+            errors.append(f"cluster map has an unknown priority: {row.get('priority')}")
+        if row.get("evidence_status") not in {"available", "partial", "missing", "unknown"}:
+            errors.append(f"cluster map has an unknown evidence_status: {row.get('evidence_status')}")
+        if row.get("cannibalization_status") not in {"none", "potential", "confirmed", "resolved", "unknown"}:
+            errors.append(f"cluster map has an unknown cannibalization_status: {row.get('cannibalization_status')}")
+    for row in links:
+        for field in ["source_url", "target_url"]:
+            if row.get(field, "").strip() not in inventory_urls:
+                errors.append(f"link plan {field} is missing from inventory: {row.get(field)}")
+        if row.get("link_status") not in {"proposed", "live", "missing", "redirected", "broken", "unknown"}:
+            errors.append(f"link plan has an unknown link_status: {row.get('link_status')}")
+        if row.get("link_type") not in {"pillar-to-cluster", "cluster-to-pillar", "sibling", "guide-to-product", "case-to-product", "product-to-guide", "other"}:
+            errors.append(f"link plan has an unknown link_type: {row.get('link_type')}")
+        if row.get("target_status") not in {"existing", "draft", "proposed", "redirected", "noindex", "retired", "missing", "unknown"}:
+            errors.append(f"link plan has an unknown target_status: {row.get('target_status')}")
+    if not any(row.get("orphan_status") == "orphan" for row in inventory):
+        errors.append("examples/cluster-architecture-small-site: missing an orphan example.")
+    if not any(row.get("cannibalization_status") == "confirmed" for row in clusters):
+        errors.append("examples/cluster-architecture-small-site: missing a confirmed cannibalization example.")
+    if report_path.is_file():
+        report = report_path.read_text(encoding="utf-8")
+        for heading in ["Cannibalization decisions", "Content gaps and next pages", "Orphan pages", "Internal-link plan"]:
+            if f"## {heading}" not in report:
+                errors.append(f"examples/cluster-architecture-small-site/architecture-report.md: missing {heading}.")
     return errors
 
 
@@ -153,18 +229,21 @@ def validate_cluster_templates(root):
     folder = root / "skills/cluster-architecture/assets"
     expected = {
         "site-inventory.csv": [
-            "url", "status", "title", "h1", "meta_description", "page_role",
-            "content_type", "primary_reader", "market", "language",
-            "evidence_status", "last_checked", "source", "notes",
+            "url", "canonical_url", "status", "title", "h1", "meta_description",
+            "page_role", "content_type", "primary_reader", "market", "language",
+            "business_value", "conversion_role", "evidence_status",
+            "last_modified", "last_checked", "inbound_link_count",
+            "orphan_status", "source", "notes",
         ],
         "cluster-map.csv": [
             "cluster_id", "pillar_url", "url", "page_role", "primary_intent",
             "focus_keyword", "parent_pillar", "sibling_urls", "priority",
-            "evidence_status", "cannibalization_status", "notes",
+            "priority_reason", "evidence_status", "cannibalization_status",
+            "notes",
         ],
         "link-plan.csv": [
-            "source_url", "target_url", "anchor_text", "link_type", "status",
-            "notes",
+            "source_url", "target_url", "anchor_text", "link_type",
+            "link_status", "target_status", "notes",
         ],
     }
     for filename, expected_header in expected.items():
