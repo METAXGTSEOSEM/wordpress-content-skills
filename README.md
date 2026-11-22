@@ -71,7 +71,7 @@ authorization are separate.
 - A cluster map, keyword plan and cannibalization check.
 - H1, SEO title, meta description, slug, excerpt, image notes and internal-link
   suggestions.
-- A recommended article length and image count with a rationale, not a fixed quota.
+- A length range set before drafting, with English word count or Chinese character count, actual length and variance, not a fixed quota.
 - An image plan with purpose, placement, caption, alt text and rights status.
 - A WordPress field pack and publishing checklist.
 - A separate technical status: `TECH_PASS`, `TECH_REWORK` or `TECH_NOT_CHECKED`.

@@ -49,8 +49,11 @@ Use `image-plan.csv`. Four planned images: hero/context, workflow diagram, permi
 ## Length and structure rationale
 
 - Recommended content-length range: 650–850 words.
+- Range set after outline and before draft: yes.
 - Why this length fits: a selection guide needs six decision sections, but no vendor-specific evidence was supplied, so a concise guide with a trial table and three general FAQs is enough; a longer vendor comparison would require invented claims.
 - Recommended image count and placement: four images; one context image, one workflow diagram, one permissions detail and one scorecard.
+- Actual length: 755 words.
+- Variance and reason: none; the final article remains within the recommended range.
 - What was intentionally left out: vendor rankings, price comparisons, customer counts and migration-time promises.
 
 ## Links and schema

@@ -27,6 +27,12 @@ ranking rules.
 
 Do not assign a universal word count or "one image every N words."
 
+English articles are measured in words; Chinese articles are measured in
+characters. Do not use character count for an English article.
+
+Set a provisional length range after the outline and before Draft v1. Do not set
+the range after the draft just to fit the output.
+
 For each article, recommend:
 
 - a content-length range based on the reader's decision, the type's required
@@ -38,6 +44,8 @@ For each article, recommend:
 
 Record the rationale. If the recommendation is "short," explain what was removed
 and why. If it is "long," explain which reader questions require the depth.
+Record the actual length and explain material variance from the range. A
+documented reason is acceptable; an unexplained mismatch is a review finding.
 
 ## GEO structure
 
@@ -89,5 +97,5 @@ one.
 - Keyword use is natural; no density target.
 - GEO summary matches the body.
 - Every image has a purpose, caption, alt text and rights status.
-- Length and image count have a recorded rationale.
+- Length, image count and actual length have a recorded basis and variance note.
 - Schema matches visible content and does not duplicate plugin output.

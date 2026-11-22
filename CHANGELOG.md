@@ -12,6 +12,7 @@
 - Align the worked example's length range, visible table, FAQ, image markers and final-review record.
 - Validate example length, GEO elements, image markers and final-review decisions.
 - Clarify README quality boundaries and remove the unsupported publish-ready claim.
+- Record length units and set provisional ranges before drafting; record actual length and variance at delivery.
 
 ## 1.5.0 - 2026-11-20
 

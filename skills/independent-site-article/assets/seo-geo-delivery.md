@@ -43,9 +43,12 @@ and status.
 
 ## Length and structure rationale
 
-- Recommended content-length range:
+- Recommended content-length range and unit:
+- Range set after outline and before draft: yes / no
 - Why this length fits the type, reader and evidence:
 - Recommended image count and placement:
+- Actual length:
+- Variance and reason:
 - What was intentionally left out:
 
 ## Links and schema

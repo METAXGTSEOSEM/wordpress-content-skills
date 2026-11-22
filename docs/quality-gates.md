@@ -18,7 +18,7 @@ Use `PASS` only when all applicable gates are met:
 | Images | The plan gives purpose, placement, caption, alt text and rights; rights are cleared or marked missing. |
 | Language editing | The specified Humanizer was actually used and its coverage is recorded. |
 | Independent review | A separate reviewer checked the exact edited version; self-review is not labeled independent. |
-| Delivery | No internal placeholders, invented evidence, unresolved blocking findings or false completion claims remain. |
+| Delivery | No internal placeholders, invented evidence, unresolved blocking findings or false completion claims remain; length range, actual length and variance are recorded. |
 
 `PASS` does not mean:
 
@@ -38,6 +38,7 @@ more gates fail. Examples:
 - the focus keyword has no source or purpose;
 - title, H1 and meta describe different pages;
 - an image has no rights status;
+- the actual length is outside the recorded range without an explanation;
 - the selected type's required section or CTA is missing;
 - an unsupported claim can be removed, qualified or replaced with evidence.
 

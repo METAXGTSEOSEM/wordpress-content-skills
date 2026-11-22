@@ -58,7 +58,7 @@
 ## Scope and constraints
 
 - Scope: manuscript / SEO/GEO package / CMS draft / publishing
-- Requested length, or ask the Skill to recommend with rationale:
+- Requested length in English words or Chinese characters, or ask the Skill to recommend with rationale:
 - Requested image count, or ask the Skill to recommend with rationale:
 - Assumptions and blocking gaps:
 

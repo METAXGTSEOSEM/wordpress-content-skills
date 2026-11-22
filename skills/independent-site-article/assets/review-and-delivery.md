@@ -52,7 +52,9 @@ A total score cannot offset them.
 
 - SEO title, H1, URL slug and meta description:
 - GEO answer/list/table/steps/FAQ elements:
-- Recommended length and rationale:
+- Length unit and recommended range:
+- Range set before draft and rationale:
+- Actual length and variance reason:
 - Recommended image count and rationale:
 - Image plan: purpose, caption, alt text, source, rights, status
 - Schema and plugin duplication:

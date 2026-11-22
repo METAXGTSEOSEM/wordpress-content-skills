@@ -78,6 +78,12 @@ def validate_examples(root):
             r"^## Frequently asked questions\s*$", final_text, re.M | re.I
         ):
             errors.append("examples/project-management-tool-article/final.md: visible FAQ is missing.")
+        for field in ["Range set after outline and before draft", "Actual length", "Variance and reason"]:
+            if field not in delivery_text:
+                errors.append(
+                    "examples/project-management-tool-article/seo-geo-delivery.md: "
+                    f"missing {field}."
+                )
         if re.search(r"Table or specification block", delivery_text, re.I) and not re.search(
             r"^\|[^\n]+\|\n\|[\s:|-]+\|", final_text, re.M
         ):

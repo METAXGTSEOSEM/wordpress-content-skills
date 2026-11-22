@@ -47,6 +47,8 @@ Record what each source supports, when it was read, and its scope. Internal mate
 
 The outline connects each section to a reader question, evidence, and a useful conclusion. Apply the selected type's required sections and evidence priorities, the primary reader's decision, and the cluster role. Verify internal-link targets. Do not prescribe fixed word counts, keyword density, paragraph length, or FAQ counts.
 
+After the outline, set a provisional content-length range and image-count plan before Draft v1. Use English words for English output and Chinese characters only for Chinese output. Record the basis. Do not set the range after drafting to fit the finished article.
+
 ## Draft v1
 
 The writer uses the brief, content type, audience notes, cluster map, keyword plan, outline, and evidence. Put important figures, specifications, standards, comparisons, cases, captions, and commercial claims in the claim record. Match the CTA to the type, reader authority and business model.
@@ -57,7 +59,7 @@ Remove unsupported nonessential claims or narrow them to what the evidence suppo
 
 Keep citations useful and accessible. Internal review notes do not belong in publishable prose.
 
-Complete the SEO/GEO delivery sheet and image plan. Recommend article length and image count with a rationale; do not use a universal word quota or "one image every N words."
+Use the provisional length range as a writing budget. Complete the SEO/GEO delivery sheet and image plan. Record the actual length and explain material variance; do not use a universal word quota or "one image every N words."
 
 ## Review v1 and revise v2
 
@@ -94,6 +96,7 @@ Verify:
 - The cluster role, cannibalization decision and internal links are consistent.
 - The keyword plan and SEO/GEO fields use one focus keyword and unique title/H1/URL/meta.
 - The image plan has purpose, caption, alt text and rights status.
+- The length range was set before drafting; actual length and any variance are recorded.
 - Editing did not change figures, conditions, certainty, negation, or attribution.
 - Titles, metadata, captions, tables, and CTA match the manuscript.
 - The specified editor was actually used and coverage limits are disclosed.
@@ -111,7 +114,7 @@ Record the accepted file, version, reviewer, time, and available hash. Substanti
 
 Deliver the manuscript, cluster map, keyword plan, SEO/GEO delivery sheet, image plan, source and claim records, and review results separately.
 
-Include a character/length rationale and an image-count/placement rationale for the specific article.
+Include a length rationale, actual length, variance note, and an image-count/placement rationale for the specific article.
 
 Editorial status: `PASS`, `REWORK`, or `BLOCKED`.
 

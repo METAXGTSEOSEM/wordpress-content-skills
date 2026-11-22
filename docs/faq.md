@@ -89,11 +89,12 @@ canonicalize, link, noindex, retire, or keep with evidence.
 
 ## How many words and images will an article have?
 
-There is no universal quota. The Skill recommends a length range and image count
-for the specific article based on its type, reader decision, required evidence
-and the current results, then records the rationale. Images are planned by role
-(product, factory, structure, detail, application, chart) with caption, alt text
-and rights status.
+There is no universal quota. English lengths are measured in words; Chinese
+lengths are measured in characters. The Skill sets a provisional range after the
+outline and before drafting, based on the type, reader decision, required
+evidence and current results. It then records the basis, actual length and any
+variance. Images are planned by role (product, factory, structure, detail,
+application, chart) with caption, alt text and rights status.
 
 ## Will it copy a competitor page?
 
