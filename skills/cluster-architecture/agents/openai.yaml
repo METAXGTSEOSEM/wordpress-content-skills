@@ -1,0 +1,4 @@
+interface:
+  display_name: "Cluster architecture"
+  short_description: "Site inventory, topic clusters, gaps, priorities and internal-link plans."
+  default_prompt: "Use $cluster-architecture to inventory my site, map it into topic clusters, find gaps and cannibalization, and produce a prioritized next-page and internal-link plan."

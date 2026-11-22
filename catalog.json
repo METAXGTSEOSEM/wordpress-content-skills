@@ -14,6 +14,14 @@
       "scope": "Blog articles, buying guides, educational content, and existing-article review."
     },
     {
+      "id": "cluster-architecture",
+      "title": "Cluster architecture",
+      "status": "available",
+      "version": "0.1.0",
+      "path": "skills/cluster-architecture",
+      "scope": "Site inventory, topic clusters, pillar roles, cannibalization, content gaps, priorities and internal-link plans before article production."
+    },
+    {
       "id": "independent-site-product-page",
       "title": "Product pages",
       "status": "planned",

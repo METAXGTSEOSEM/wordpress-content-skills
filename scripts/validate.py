@@ -148,6 +148,34 @@ def validate_role_docs(root):
     return errors
 
 
+def validate_cluster_templates(root):
+    errors = []
+    folder = root / "skills/cluster-architecture/assets"
+    expected = {
+        "site-inventory.csv": [
+            "url", "status", "title", "h1", "meta_description", "page_role",
+            "content_type", "primary_reader", "market", "language",
+            "evidence_status", "last_checked", "source", "notes",
+        ],
+        "cluster-map.csv": [
+            "cluster_id", "pillar_url", "url", "page_role", "primary_intent",
+            "focus_keyword", "parent_pillar", "sibling_urls", "priority",
+            "evidence_status", "cannibalization_status", "notes",
+        ],
+        "link-plan.csv": [
+            "source_url", "target_url", "anchor_text", "link_type", "status",
+            "notes",
+        ],
+    }
+    for filename, expected_header in expected.items():
+        if csv_header(folder / filename) != expected_header:
+            errors.append(f"skills/cluster-architecture/assets/{filename}: invalid headers.")
+    for filename in ["architecture-brief.md", "architecture-report.md"]:
+        if not (folder / filename).is_file():
+            errors.append(f"skills/cluster-architecture/assets/{filename}: missing template.")
+    return errors
+
+
 def validate(root):
     errors = []
     catalog_file = root / "catalog.json"
@@ -234,6 +262,7 @@ def validate(root):
             errors.append("README available-module count does not match the catalog.")
     errors.extend(validate_examples(root))
     errors.extend(validate_role_docs(root))
+    errors.extend(validate_cluster_templates(root))
     for path in root.rglob("*"):
         relative = path.relative_to(root)
         if any(part in {".git", "__pycache__", "articles", "verification-private", ".maintenance"} or part.startswith("._") for part in relative.parts):

@@ -23,6 +23,7 @@
 
 <p align="center">
   <a href="#quickstart">Quickstart</a> ·
+  <a href="#cluster-planning">Cluster planning</a> ·
   <a href="examples/project-management-tool-article/README.md">See a full example</a> ·
   <a href="#workflow-catalog">Workflows</a> ·
   <a href="#installation">Install</a> ·
@@ -52,7 +53,10 @@ Product pages, case studies, and UI/UX improvements are planned as separate
 modules with their own briefs, review criteria, and deliverables. They are not
 included in the current release.
 
-**Current release:** `1.5.0` · **Available modules:** `1` · **License:** MIT
+**Current release:** `1.5.0` · **Available modules:** `2` · **License:** MIT
+
+The `cluster-architecture` module is available on `main` as a `0.1.0` preview.
+The latest tagged release is still `v1.5.0`.
 
 **Repository:** [METAXGTSEOSEM/wordpress-content-skills](https://github.com/METAXGTSEOSEM/wordpress-content-skills).
 The article Skill keeps its existing ID, `independent-site-article`, and is now
@@ -121,6 +125,15 @@ records the assumption.
 See [cluster and keywords](skills/independent-site-article/references/cluster-and-keywords.md)
 and [SEO/GEO delivery](skills/independent-site-article/references/seo-geo-delivery.md),
 or read the [recent-article style ledger](docs/article-style-ledger.md).
+
+## Cluster planning
+
+Use [`cluster-architecture`](skills/cluster-architecture/SKILL.md) before writing
+when the question is which pages a site needs, how they relate, or what to write
+next. It inventories URLs, assigns pillar and cluster roles, checks
+cannibalization, finds gaps, prioritizes pages and produces an internal-link
+plan. It hands one selected page to `independent-site-article` instead of writing
+the manuscript itself.
 
 ## Who it is for
 
@@ -225,6 +238,7 @@ underlying files.
 | Workflow | Status | Installable Skill | Scope |
 | :--- | :--- | :--- | :--- |
 | **Articles** | **Available · v1.3.0** | [`independent-site-article`](skills/independent-site-article/SKILL.md) | Type-aware articles with audience calibration, cluster and keyword planning, cannibalization checks, SEO / GEO delivery, image planning, evidence checks, language editing, and final review. |
+| **Cluster architecture** | **Available · v0.1.0 preview** | [`cluster-architecture`](skills/cluster-architecture/SKILL.md) | Site inventory, topic clusters, pillar roles, cannibalization, content gaps, priorities and internal-link plans. |
 | **Product pages** | Planned | Not released | Product specifications, purchase intent, substantiated benefits, comparisons, and conversion review. |
 | **Case studies** | Planned | Not released | Customer permission, project evidence, measured outcomes, narrative, and attribution review. |
 | **UI/UX improvements** | Planned | Not released | Existing-site audit, page structure, design handoff, responsive behavior, and implementation QA. |
@@ -242,17 +256,19 @@ https://github.com/METAXGTSEOSEM/wordpress-content-skills
 ```
 
 1. Download the release ZIP or use a host-supported repository installer.
-2. Select only the available article module at `skills/independent-site-article/`.
+2. Select `skills/independent-site-article/` for article production and/or
+   `skills/cluster-architecture/` for site-level cluster planning.
 3. Keep the complete folder, including `SKILL.md`, `references/`, `assets/` and
    `agents/`. Copying only `SKILL.md` leaves required instructions and templates behind.
-4. Install the required language editor listed below and make both Skills
-   available to the coordinating assistant.
+4. For article production, install the required language editor listed below
+   and make the Skills available to the coordinating assistant.
 5. Confirm the host can load the Skill and its supporting files before starting
-   an article.
+   an article or architecture audit.
 
 For discovery and installation, use only entries marked `available` in
 [catalog.json](catalog.json). Planned modules have no installation path.
 Installing the article module does not register a fixed set of global subagents.
+The cluster module is a planning Skill; it does not crawl or publish by itself.
 
 ### Language editing dependencies
 
@@ -347,6 +363,11 @@ skills/
     agents/openai.yaml
     references/                  Workflow, content types, audience, cluster/keywords, SEO/GEO and policy sources
     assets/                      Brief, cluster, keyword, image, delivery and style-ledger templates
+  cluster-architecture/           Site inventory, clusters, gaps, priorities and link plans
+    SKILL.md
+    agents/openai.yaml
+    references/                   Architecture method
+    assets/                       Brief, inventory, cluster map, link plan and report templates
 examples/
   project-management-tool-article/  Complete synthetic article package
   audience-rewrite/                  Training-manual vs decision-led opening
