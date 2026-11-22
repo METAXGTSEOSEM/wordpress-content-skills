@@ -2,7 +2,7 @@
 
 <p align="center">
   <strong>Turn a content brief into a sourced, reviewed WordPress article.</strong><br>
-  Research, drafting, fact-checking, SEO / GEO review, human editing, and a publish-ready package.
+  Research, drafting, fact-checking, SEO / GEO review, human editing, and a package with explicit editorial and technical status.
 </p>
 
 <p align="center">
@@ -186,6 +186,7 @@ shows the complete handoff:
 | First draft | [draft-v1.md](examples/project-management-tool-article/draft-v1.md) |
 | Review decision | [review.md](examples/project-management-tool-article/review.md) |
 | Final article | [final.md](examples/project-management-tool-article/final.md) |
+| Final review record | [final-review.md](examples/project-management-tool-article/final-review.md) |
 | WordPress fields | [wordpress-fields.md](examples/project-management-tool-article/wordpress-fields.md) |
 | Cluster map | [cluster-map.csv](examples/project-management-tool-article/cluster-map.csv) |
 | Keyword plan | [keyword-plan.csv](examples/project-management-tool-article/keyword-plan.csv) |
@@ -318,9 +319,9 @@ action or production change requires separate authorization.
 ## Quality boundaries
 
 <details>
-<summary><strong>What the workflow will not do</strong></summary>
+<summary><strong>Quality boundaries and required checks</strong></summary>
 
-- Verify current primary sources instead of treating the policy baseline as permanently current.
+- Verify current primary sources; the policy baseline is not permanently current.
 - Do not invent specifications, testimonials, experience, certifications, statistics, or search data.
 - Recheck facts and qualifiers after language editing.
 - Do not substitute word-count targets, keyword density, NLP scores, or AI-detector scores for review.

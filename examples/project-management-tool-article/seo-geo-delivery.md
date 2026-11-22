@@ -37,9 +37,9 @@
 
 - Direct answer: Choose a tool by testing the same agency workflow and client-access scenario across every vendor, not by comparing feature counts.
 - Key-points list: requirements, client access, reporting, trial, total cost.
-- Table or specification block: trial scorecard and criteria matrix.
+- Table or specification block: trial evidence table with setup, access, reporting and exit criteria.
 - Steps: six numbered decision steps.
-- Visible FAQ: three questions about trials, guest access and migration.
+- Visible FAQ: three questions about vendor count, client access and migration uncertainty.
 - What to verify: current plan limits, permissions, export, billing terms and migration effort.
 
 ## Images
@@ -48,8 +48,8 @@ Use `image-plan.csv`. Four planned images: hero/context, workflow diagram, permi
 
 ## Length and structure rationale
 
-- Recommended content-length range: 1,200–1,600 words.
-- Why this length fits: a selection guide needs six decision sections, but no vendor-specific evidence was supplied, so a longer comparison would require invented claims.
+- Recommended content-length range: 650–850 words.
+- Why this length fits: a selection guide needs six decision sections, but no vendor-specific evidence was supplied, so a concise guide with a trial table and three general FAQs is enough; a longer vendor comparison would require invented claims.
 - Recommended image count and placement: four images; one context image, one workflow diagram, one permissions detail and one scorecard.
 - What was intentionally left out: vendor rankings, price comparisons, customer counts and migration-time promises.
 

@@ -8,6 +8,8 @@ and compare vendors without relying on marketing claims.
 The guidance below is general. Confirm current features, limits, pricing and
 contract terms with each vendor before making a purchase.
 
+[IMAGE: IMG-01 — Synthetic context image of an agency team reviewing a shared project board.]
+
 ## 1. Map the work before comparing tools
 
 List the project types your agency handles and the steps each one follows:
@@ -18,6 +20,8 @@ cause delays.
 Turn that map into requirements. Separate must-have requirements from features
 that would be useful but are not essential. This gives every vendor the same
 basis for a response.
+
+[IMAGE: IMG-02 — Diagram of requirements, trial tasks, evidence and decision.]
 
 ## 2. Test client access and permissions
 
@@ -31,6 +35,8 @@ comments, budgets or other projects. Build a realistic test scenario:
 
 Record what each role can see and do. Ask the vendor to explain any limitation
 that appears during the trial.
+
+[IMAGE: IMG-03 — Diagram of client guest permissions and internal-only work.]
 
 ## 3. Compare reporting against decisions
 
@@ -57,6 +63,15 @@ Set an acceptance rule before the trial. For example, the team may require that
 every must-have item is demonstrated and that no critical permission issue
 remains unresolved.
 
+| Evidence area | What to record | Why it matters |
+| --- | --- | --- |
+| Setup | Time to create the project and invite the trial users | Shows whether the team can start without hidden setup work. |
+| Client access | Which files, comments and approvals each role can see | Tests the permission model against the agency workflow. |
+| Reporting | The decisions the team can make from the available data | Separates useful reporting from decorative dashboards. |
+| Exit | Export format, migration effort and contract terms | Exposes switching costs before the team commits. |
+
+[IMAGE: IMG-04 — Visual version of the trial scorecard.]
+
 ## 5. Check the total cost and contract
 
 Compare the current plan limits, user roles, storage, guest access and add-ons.
@@ -73,3 +88,21 @@ the decision, the assumptions and the next review date.
 
 **Next step:** write a one-page requirements list and a trial scorecard, then ask
 each vendor to demonstrate the same client-access scenario.
+
+## Frequently asked questions
+
+### How many tools should we trial?
+
+Use a shortlist large enough to compare meaningful differences, but small enough
+to run the same scenario for every vendor. The number matters less than using
+identical tasks and evidence.
+
+### Should we test client access before comparing price?
+
+Yes. A pricing advantage does not compensate for a permission model that exposes
+internal work or blocks client approvals.
+
+### What if a vendor cannot confirm migration effort?
+
+Ask for a sample export and a written migration scope. If the vendor cannot
+provide either, record the uncertainty and treat it as a decision risk.

@@ -9,6 +9,9 @@
 - Add a security policy and project code of conduct with private reporting paths.
 - Add a rendered delivery preview and update the README overview and latest-release line.
 - Add a structured Show and tell discussion template for redacted article packages.
+- Align the worked example's length range, visible table, FAQ, image markers and final-review record.
+- Validate example length, GEO elements, image markers and final-review decisions.
+- Clarify README quality boundaries and remove the unsupported publish-ready claim.
 
 ## 1.5.0 - 2026-11-20
 

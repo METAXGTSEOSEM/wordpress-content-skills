@@ -25,13 +25,18 @@ def csv_header(path):
         return None
 
 
+def word_count(text):
+    return len(re.findall(r"[A-Za-z0-9]+(?:['’-][A-Za-z0-9]+)*", text))
+
+
 def validate_examples(root):
     errors = []
     required = {
         "project-management-tool-article": [
             "README.md", "brief.md", "sources.csv", "claims.csv", "draft-v1.md",
-            "review.md", "final.md", "wordpress-fields.md", "cluster-map.csv",
-            "keyword-plan.csv", "image-plan.csv", "seo-geo-delivery.md",
+            "review.md", "final.md", "final-review.md", "wordpress-fields.md",
+            "cluster-map.csv", "keyword-plan.csv", "image-plan.csv",
+            "seo-geo-delivery.md",
         ],
         "audience-rewrite": ["README.md", "before.md", "after.md", "review.md"],
     }
@@ -47,6 +52,49 @@ def validate_examples(root):
         actual = csv_header(example_folder / filename)
         if expected and actual != expected:
             errors.append(f"examples/project-management-tool-article/{filename}: headers do not match the template.")
+    final = example_folder / "final.md"
+    delivery = example_folder / "seo-geo-delivery.md"
+    final_review = example_folder / "final-review.md"
+    image_plan = example_folder / "image-plan.csv"
+    if final.is_file() and delivery.is_file():
+        final_text = final.read_text(encoding="utf-8")
+        delivery_text = delivery.read_text(encoding="utf-8")
+        range_match = re.search(
+            r"Recommended content-length range:\s*([\d,]+)\s*[–-]\s*([\d,]+)\s*words",
+            delivery_text,
+        )
+        if not range_match:
+            errors.append("examples/project-management-tool-article/seo-geo-delivery.md: missing a parseable length range.")
+        else:
+            low = int(range_match.group(1).replace(",", ""))
+            high = int(range_match.group(2).replace(",", ""))
+            actual = word_count(final_text)
+            if not low <= actual <= high:
+                errors.append(
+                    "examples/project-management-tool-article/final.md: "
+                    f"{actual} words is outside the recommended {low}-{high} range."
+                )
+        if re.search(r"Visible FAQ", delivery_text, re.I) and not re.search(
+            r"^## Frequently asked questions\s*$", final_text, re.M | re.I
+        ):
+            errors.append("examples/project-management-tool-article/final.md: visible FAQ is missing.")
+        if re.search(r"Table or specification block", delivery_text, re.I) and not re.search(
+            r"^\|[^\n]+\|\n\|[\s:|-]+\|", final_text, re.M
+        ):
+            errors.append("examples/project-management-tool-article/final.md: visible table is missing.")
+        if image_plan.is_file():
+            with image_plan.open(newline="", encoding="utf-8") as handle:
+                for row in csv.DictReader(handle):
+                    image_id = row.get("image_id", "").strip()
+                    if image_id and image_id not in final_text:
+                        errors.append(
+                            "examples/project-management-tool-article/final.md: "
+                            f"missing image marker {image_id}."
+                        )
+    if final_review.is_file():
+        review_text = final_review.read_text(encoding="utf-8")
+        if not re.search(r"Editorial decision:\s*`?(PASS|REWORK|BLOCKED)`?", review_text):
+            errors.append("examples/project-management-tool-article/final-review.md: missing editorial decision.")
     return errors
 
 

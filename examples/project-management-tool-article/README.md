@@ -4,7 +4,8 @@ This folder is a synthetic demonstration of the article workflow. The agency,
 tool names and example copy are illustrative. Do not publish the sample as a
 real vendor comparison or treat its placeholders as verified facts.
 
-It shows the handoff from a short brief to a reviewed, publish-ready package:
+It shows the handoff from a short brief to a revised editorial package with an
+explicit final review record:
 
 | File | Purpose |
 | --- | --- |
@@ -14,6 +15,7 @@ It shows the handoff from a short brief to a reviewed, publish-ready package:
 | `draft-v1.md` | First draft with reviewable weaknesses. |
 | `review.md` | Version-specific `REWORK` decision and required changes. |
 | `final.md` | Revised article after the findings were addressed. |
+| `final-review.md` | Synthetic final review record and remaining limits. |
 | `wordpress-fields.md` | Publishing fields and handoff notes. |
 | `cluster-map.csv` | Page role, parent pillar, siblings and internal-link direction. |
 | `keyword-plan.csv` | Focus, secondary and supporting terms with provenance. |
@@ -29,6 +31,8 @@ It shows the handoff from a short brief to a reviewed, publish-ready package:
 - SEO and AI-search guidance does not override factual accuracy.
 - The cluster map shows the page's role and internal links before drafting.
 - The SEO/GEO sheet recommends a length and image count with a reason, not a fixed quota.
+- The final review record shows the decision fields and the limits of a synthetic
+  demonstration.
 - The final package includes fields a WordPress editor can use directly.
 
 ## Run the same workflow
